@@ -249,7 +249,7 @@ func main() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 
-	logger.Infof("Starting EST server FOR NON-PRODUCTION USE ONLY")
+	// logger.Infof("Starting EST server FOR NON-PRODUCTION USE ONLY")
 
 	go func() {
 		if err := s.ServeTLS(ln, "", ""); !errors.Is(err, http.ErrServerClosed) {
